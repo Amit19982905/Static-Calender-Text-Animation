@@ -1,0 +1,196 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 4px;
+    background-color: aquamarine;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    /* border: 3px solid black; */
+}
+
+/* calaender */
+.calender{
+    border: 4px solid black;
+    padding: 2vw;
+    margin: 2vw;
+    background-color: beige;
+}
+
+h1{
+    font-size: 5vw;
+    text-align: center;
+    padding-bottom: 1vw;
+    
+}
+.head{
+    
+    background-color: #92c1ea;
+    height: 10%;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+.head ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    column-gap: 2vw;
+    
+}
+.head ul li{
+    list-style: none;
+    font-size: 3vw;    
+    padding: 0.5vw 1vw;
+    
+}
+.day{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    column-gap: 2vw;
+}
+.date{
+    font-size: 5vw;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+.start{
+    grid-column-start: 3;
+}
+.date:hover{
+    background-color: aqua;
+    border-radius: 50%;
+    
+}
+
+/* text animation */
+
+.text-animation{
+    width: 15vw;
+    height: 11vw;
+    margin: 10vw auto;
+    background-color: antiquewhite;
+    color: black;
+    border: 0.1vw solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vw;
+}
+.text-animation h1 {
+    text-align: center;
+    font-size: 2vw;
+    padding: 0.2vw;
+}
+
+#main1 {
+    
+    color: white;
+    background-color: rgb(108, 232, 108);
+    animation: text-change1 6s linear infinite;
+    position: absolute;
+    visibility: hidden;
+    /* margin: auto; */
+    bottom: -1vw;
+    right: 1.5vw;
+    
+    
+}
+
+#main2 {
+    
+    position: absolute;
+    color: white;
+    background-color: rgb(108, 129, 232);
+    animation: text-change2 6s linear infinite;
+    visibility: hidden;
+    left: 4vw;
+    bottom: -1vw;
+}
+
+#main3 {
+    
+    position: absolute;
+    color: white;
+    background-color: rgb(205, 29, 29);
+    animation: text-change3 6s linear infinite;
+    
+    visibility: hidden;
+    
+    right: 0.5vw;
+    bottom: -1vw;
+    
+    
+}
+
+#anime {
+    position: relative;
+    
+}
+
+@keyframes text-change1 {
+    0% {
+        visibility: visible;
+        z-index: 1;
+    }
+    10%{
+        visibility: hidden;
+        z-index: -1;
+    }
+    
+    
+    100% {
+        visibility: visible;
+        z-index: 1;
+    }
+
+}
+
+@keyframes text-change2 {
+    0% {
+        visibility: hidden;
+        z-index: -2;
+    }
+    25% {
+        visibility: visible;
+        z-index: 2;
+    }
+    
+    35%{
+        visibility: hidden;
+        z-index: -2;
+    } 
+    
+    100% {
+        visibility: hidden;
+        z-index: -2;
+    } 
+    
+}
+
+@keyframes text-change3 {
+    0% {
+        visibility: hidden;
+        z-index: -3;
+    }
+    70% {
+        visibility: visible;
+        z-index: 3;
+    }
+    
+    80%{
+        visibility: hidden;
+        z-index: -3;
+        
+    }
+    100%{
+        visibility: hidden;
+        z-index: -3;
+        
+    }
+}
